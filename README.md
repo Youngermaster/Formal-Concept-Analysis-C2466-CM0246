@@ -1,6 +1,6 @@
 # Formal Concept Analysis (FCA) - C2466-CM0246
 
-Este proyecto implementa el Análisis Formal de Conceptos (FCA) para la clase **C2466-CM0246-1939**, mostrando el proceso de construcción de un conjunto de conceptos formales y la representación gráfica de sus relaciones jerárquicas en un lattice de conceptos.
+Este proyecto implementa el Análisis Formal de Conceptos (FCA) para la clase **C2466-CM0246-1939**, mostrando el proceso de construcción de un conjunto de conceptos formales y la representación gráfica de sus relaciones jerárquicas en un látice de conceptos.
 
 ## Paso 1: Selección de Objetos y Atributos
 

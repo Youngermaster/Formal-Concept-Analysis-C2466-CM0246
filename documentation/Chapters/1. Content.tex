@@ -1,106 +1,111 @@
 \section{Objetivos}
 \begin{itemize}
-    \item Generar un patrón de interferencia utilizando un biprisma de Fresnel.
-    \item Interpretar la estructura del patrón de interferencia en términos de la superposición de dos ondas.
-    \item Determinar la longitud de onda de un láser a partir de la observación del patrón de interferencia y la geometría del montaje.
+    \item Comprender el proceso de Análisis Formal de Conceptos (\textit{FCA}) y su aplicación en la organización jerárquica de datos.
+    \item Definir un conjunto de objetos y atributos y construir el látice de conceptos formales correspondiente.
+    \item Visualizar y analizar la estructura del látice para interpretar relaciones entre objetos y atributos.
+    \item Facilitar la interpretación de los datos a través de la visualización tabular y gráfica.
 \end{itemize}
 
 \section{Marco Teórico}
-La luz se describe como un conjunto de perturbaciones eléctricas y magnéticas que se propagan a través del espacio, definidas por vectores de campo eléctrico y magnético que oscilan sincrónicamente. Cuando dos o más ondas coexisten en un mismo lugar, sus campos se suman vectorialmente, resultando en interferencia. Este fenómeno ocurre no solo en un punto, sino en una región donde las ondas coexisten, conocida como región de interferencia. El experimento de Young es una demostración clásica de interferencia donde un láser ilumina una pantalla con dos orificios, creando un patrón de franjas brillantes y oscuras en una pantalla de observación. Estas franjas resultan de la interferencia constructiva y destructiva de las ondas que emergen de los orificios.
 
-\subsection{Interferencia Constructiva y Destructiva}
-Ondas coherentes de la misma longitud de onda interfieren al superponerse. Si las ondas están en fase (diferencia de fase de cero o múltiplo de \(2\pi\)), interfieren constructivamente resultando en una amplitud combinada mayor y, por lo tanto, mayor intensidad. Si están en contrafase (diferencia de fase de \(\pi\) o un número impar de veces \(\pi\)), interfieren destructivamente, reduciendo o anulando la intensidad combinada.
+El Análisis Formal de Conceptos (\textit{FCA}, por sus siglas en inglés) es un enfoque matemático para analizar y estructurar datos a partir de conceptos formales. Un \textbf{concepto formal} se define como un par de conjuntos: la \textbf{extensión}, que representa los objetos que cumplen ciertos atributos, y la \textbf{intensión}, que es el conjunto de atributos que comparten dichos objetos. El conjunto de todos los conceptos formales de un contexto, junto con la relación de subconjunto entre sus extensiones, forma una estructura jerárquica llamada \textbf{látice de conceptos}.\\
 
-\subsection{Localización de Franjas de Interferencia}
-En el montaje de Young, la luz que incide en puntos específicos de la pantalla ha viajado a través de caminos de diferente longitud desde cada uno de los orificios, generando una diferencia de caminos que afecta la fase relativa de las ondas en esos puntos. Dependiendo de esta diferencia de caminos, las ondas pueden interferir constructiva o destructivamente, creando el patrón de franjas observado. La posición y separación de estas franjas se pueden predecir y analizar mediante principios geométricos y la relación de las longitudes de onda con las dimensiones del montaje.
 
-\section{Conjunto de objetos con sus atributos}
-\textbf{Siguiendo las indicaciones de esta guía, realice el montaje.}
+El \textit{FCA} permite identificar relaciones y patrones en datos binarios y representa estas relaciones en un látice que muestra la inclusión de subconjuntos entre conceptos. Los nodos en el látice representan conceptos y las conexiones representan relaciones de subconjunto, donde los conceptos más generales están en niveles superiores y los específicos en niveles inferiores. Este tipo de análisis es útil para explorar y organizar datos en una variedad de áreas, como la ciencia de la información, el aprendizaje automático y la biología.
 
-\section{Análisis y discusión: Determinación de la Longitud de Onda}
+\section{Conjunto de Objetos con sus Atributos}
 
-\subsection{Reporte de valores}
-\textbf{Reporte los siguientes valores:}
+Definimos un conjunto de \textbf{objetos} y \textbf{atributos} para el análisis formal. Estos objetos y atributos representan un contexto formal para el análisis.
+
 \begin{itemize}
-  \item Distancia focal $f$ de la lente: $0.02m$
-  \item Distancia $f$ $+$ $A$ (entre la lente y el biprisma) medida: $0.02m + 0.047m$
-  \item Valor de $A$ calculado: $0.047m$
+  \item \textbf{Objetos}:
+  \begin{itemize}
+      \item O1: "Libro de Ciencia"
+      \item O2: "Cuaderno"
+      \item O3: "Bolígrafo"
+      \item O4: "Regla"
+      \item O5: "Lápiz"
+      \item O6: "Libro de Matemáticas"
+      \item O7: "Calculadora"
+      \item O8: "Compás"
+  \end{itemize}
 \end{itemize}
 
-\subsection{Reporte de valores $D$ y $L$}
-\textbf{Reporte el valor medido de la distancia $D$ (entre el biprisma y la pantalla) y calcule $L$:}
 \begin{itemize}
-  \item $D$: $0.903$
-  \item $L$: $0.93$
+  \item \textbf{Atributos}:
+  \begin{itemize}
+      \item A1: "Escribible"
+      \item A2: "Leíble"
+      \item A3: "De medición"
+      \item A4: "Digital"
+      \item A5: "De dibujo"
+  \end{itemize}
 \end{itemize}
 
-\subsection{Calcular separación entre fuentes}
-\textbf{Asumiendo que $\alpha = 35\prime$ y que $n = 1.51$ , calcule la
-separación $d$ entre las fuentes $S_{1}$ y $S_{2}$.}
-\[ d = 2A\alpha(n-1) \]
-\[ d = 0.000488081 \]
+\section{Descripción del Contexto Formal}
 
-\subsection{$\Delta$$y$}
-\textbf{Determine $\Delta$$y$.}
+La descripción detallada de cada objeto con sus atributos es la siguiente:
 
-\[ \Delta y = 0.00028 \]
+\begin{itemize}
+    \item \textbf{O1} ("Libro de Ciencia") - Atributos: Leíble
+    \item \textbf{O2} ("Cuaderno") - Atributos: Escribible, Leíble
+    \item \textbf{O3} ("Bolígrafo") - Atributos: Escribible
+    \item \textbf{O4} ("Regla") - Atributos: De medición
+    \item \textbf{O5} ("Lápiz") - Atributos: Escribible
+    \item \textbf{O6} ("Libro de Matemáticas") - Atributos: Leíble
+    \item \textbf{O7} ("Calculadora") - Atributos: Digital
+    \item \textbf{O8} ("Compás") - Atributos: De medición, De dibujo
+\end{itemize}
 
-
-\subsection{Longitud de onda del láser}
-\textbf{Calcule la longitud de onda del láser, con base en los datos anteriores.}
-
-\[ \Delta y = \frac{L}{d}\lambda \]
-\[ \lambda = \frac{\Delta y\times d}{L} \]
-\[ \lambda = 1.47E-07 \]
-
-\subsection{Variantes de medidas}
-\textbf{Cambie el valor de alguno de los parámetros siguientes: $D$, $A$ ó $f$; Determine nuevamente la longitud de onda:}
+Esta información se presenta en una tabla de contexto formal, donde cada celda indica la presencia (1) o ausencia (0) de un atributo en cada objeto (Figura \ref{fig:tabular_view}).
 
 \begin{figure}[H]
   \centering
-  \begin{subfigure}[b]{\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/1. Content/tabla1.png}
-      \caption{Tabla de diversos valores de longitud de onda}
-      \label{fig: Diversos valores de longitud de onda}
-  \end{subfigure}
-  \hfill
+  \includegraphics[width=\textwidth]{Figures/1. Content/tabular_view.png}
+  \caption{Vista Tabular del Contexto Formal}
+  \label{fig:tabular_view}
 \end{figure}
 
-\subsection{Calculo de errores}
-\textbf{Asuma $\lambda = 518nm$ como el valor teórico de la longitud de onda del láser de diodo
-y calcule los porcentajes de error de las longitudes de onda obtenidas
-experimentalmente.}
+\section{Conjunto de Conceptos Formales}
+
+Cada concepto formal \( C \) consiste en un \textbf{conjunto de objetos} (extensión) y un \textbf{conjunto de atributos compartidos} (intensión). A continuación, se presentan algunos conceptos formales extraídos del contexto:
+
+\begin{itemize}
+    \item \textbf{C1}: Extensión: \{O1, O2, O6\}, Intensión: \{Leíble\}
+    \item \textbf{C2}: Extensión: \{O2\}, Intensión: \{Escribible, Leíble\}
+    \item \textbf{C3}: Extensión: \{O3, O5\}, Intensión: \{Escribible\}
+    \item \textbf{C4}: Extensión: \{O4\}, Intensión: \{De medición\}
+    \item \textbf{C5}: Extensión: \{O7\}, Intensión: \{Digital\}
+    \item \textbf{C6}: Extensión: \{O8\}, Intensión: \{De medición, De dibujo\}
+    \item \textbf{C7}: Extensión: \{O4, O8\}, Intensión: \{De medición\}
+\end{itemize}
+
+\section{Relación de Orden Parcial}
+
+La relación de orden parcial entre los conceptos formales se establece mediante la inclusión de subconjuntos entre extensiones e intensiones. En esta jerarquía, los conceptos específicos (con más atributos) se encuentran en niveles inferiores, mientras que los conceptos más generales (con menos atributos) están en niveles superiores.
+
+\begin{itemize}
+    \item \textbf{C1} $\leq$ \textbf{C2}: {O2} es un subconjunto de {O1, O2, O6} y {Escribible, Leíble} $\subseteq$ {Leíble}.
+    \item \textbf{C4 $\leq$ C7}: {O4} $\subseteq$ {O4, O8} y {De medición} $\subseteq$ {De medición}.
+  \end{itemize}
+  
+\section{Representación Gráfica del Látice de Conceptos}
+
+La estructura jerárquica de los conceptos se visualiza en un \textbf{Látice de conceptos} (Figura \ref{fig:lattice_view}), donde cada nodo representa un concepto formal y las conexiones muestran las relaciones de inclusión.
 
 \begin{figure}[H]
   \centering
-  \begin{subfigure}[b]{\textwidth}
-      \centering
-      \includegraphics[width=0.4\textwidth]{Figures/1. Content/tabla2.png}
-      \caption{Tabla de diversos porcentajes de error para cada longitud de onda}
-      \label{fig: Tabla de diversos porcentajes de error para cada longitud de onda}
-  \end{subfigure}
-  \hfill
+  \includegraphics[width=\textwidth]{Figures/1. Content/lattice_view.png}
+  \caption{Látice de Conceptos con Etiquetas}
+  \label{fig:lattice_view}
 \end{figure}
 
-
-\section{Causas de Error}
-Las causas de error en este experimento sobre interferencia y el Experimento de Young podrían incluir:
-
+En el Látice:
 \begin{itemize}
-    \item \textbf{Alineación del sistema óptico:} Pequeños desajustes en la alineación de la lente y el biprisma pueden causar grandes desviaciones en los patrones de interferencia observados, afectando la precisión de las mediciones de la longitud de onda.
-    \item \textbf{Calibración del equipo:} Errores en la calibración de los instrumentos de medición como el flexómetro y el pie de rey pueden introducir inexactitudes en las mediciones de distancias, afectando los cálculos de longitud de onda.
-    \item \textbf{Estabilidad del láser:} Variaciones en la intensidad del láser debido a fluctuaciones en la alimentación eléctrica o condiciones ambientales como la temperatura pueden alterar la coherencia de la luz y, por ende, el patrón de interferencia.
-    \item \textbf{Presencia de vibraciones:} Vibraciones en el ambiente de laboratorio pueden desplazar el equipo óptico durante la toma de datos, resultando en variaciones en la posición de las franjas de interferencia.
-    \item \textbf{Difracción adicional:} Imperfecciones en los bordes del biprisma o suciedad en las superficies ópticas pueden introducir efectos de difracción adicionales que modifican el patrón de interferencia.
+    \item \textbf{C0} representa el concepto vacío en la parte superior.
+    \item Los nodos están etiquetados con el conjunto de atributos o el conjunto de objetos que representan, destacando las relaciones de subconjunto.
 \end{itemize}
 
 \section{Conclusiones}
-Basado en los experimentos realizados, se concluye que:
-\begin{itemize}
-    \item \textbf{Confirmación del fenómeno de interferencia:} Los resultados experimentales confirmaron la teoría ondulatoria de la luz, mostrando patrones de interferencia consistentes con la interferencia constructiva y destructiva.
-    \item \textbf{Medición de la longitud de onda:} Se logró determinar la longitud de onda del láser con una precisión razonable, utilizando la geometría del montaje y el patrón de interferencia. Los valores obtenidos estuvieron en general acuerdo con los valores teóricos esperados, aunque con variaciones que pueden atribuirse a las causas de error identificadas.
-    \item \textbf{Importancia de la precisión experimental:} Este experimento resaltó la importancia de una cuidadosa configuración experimental y precisión en la medición para obtener resultados fiables en experimentos de óptica.
-    \item \textbf{Educación práctica en óptica física:} La realización del experimento proporcionó una experiencia práctica valiosa en la manipulación y medición de fenómenos ópticos, reforzando la comprensión teórica y práctica de la interferencia de la luz.
-    \item \textbf{Recomendaciones para futuros experimentos:} Se recomienda mejorar la estabilidad del montaje, realizar una calibración más exhaustiva de los instrumentos de medición y asegurar la limpieza completa de todas las superficies ópticas antes de realizar el experimento.
-\end{itemize}
+
+El Análisis Formal de Conceptos permite organizar y visualizar de manera jerárquica la relación entre conjuntos de objetos y atributos en un contexto formal. A través de la construcción de un látice de conceptos, se facilita la interpretación de las relaciones entre datos, destacando las propiedades compartidas y las diferencias entre los objetos. La representación tabular y gráfica ofrece una visión completa del contexto, permitiendo observar tanto la especificidad como la generalidad de los conceptos. Este análisis tiene aplicaciones en diversas disciplinas, proporcionando una estructura útil para el análisis de datos en áreas como la biología, el aprendizaje automático y la organización de información.
