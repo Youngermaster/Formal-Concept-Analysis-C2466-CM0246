@@ -75,6 +75,10 @@ En el lattice:
 
 La tabla de contexto formal y el lattice de conceptos permiten una mejor comprensión del análisis de los datos. A continuación, se muestran ambas representaciones generadas mediante el código en Python.
 
-| Tabular view                          | Lattice view                          |
-| ------------------------------------- | ------------------------------------- |
-| ![Tabular View](img/tabular_view.png) | ![Lattice View](img/lattice_view.png) |
+| Vista del Látice                      |
+| ------------------------------------- |
+| ![Lattice View](img/lattice_view.png) |
+
+| Vista Tabular                         |
+| ------------------------------------- |
+| ![Tabular View](img/tabular_view.png) |
