@@ -26,7 +26,7 @@ K = FormalContext(data, objects, attributes)
 df = pd.DataFrame(data, index=objects, columns=attributes)
 
 # Visualizar el contexto formal como heatmap
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(15, 6))
 sns.heatmap(df, annot=True, cmap="YlGnBu", cbar_kws={'label': 'Presencia de relación'})
 plt.title("Contexto Formal")
 plt.xlabel("Atributos")
@@ -37,7 +37,7 @@ plt.savefig('img/tabular_view.png')
 L = ConceptLattice.from_context(K)
 
 # Visualización del lattice con etiquetas y colores personalizados
-fig, ax = plt.subplots(figsize=(12, 6))
+fig, ax = plt.subplots(figsize=(11, 6))
 visualizer = LineVizNx()
 
 # Dibujar el lattice y activar etiquetas de nodos
