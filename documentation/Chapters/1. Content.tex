@@ -1,3 +1,5 @@
+\newcommand{\quotes}[1]{``#1''}
+
 \section{Objetivos}
 \begin{itemize}
     \item Comprender el proceso de Análisis Formal de Conceptos (\textit{FCA}) y su aplicación en la organización jerárquica de datos.
@@ -20,25 +22,25 @@ Definimos un conjunto de \textbf{objetos} y \textbf{atributos} para el análisis
 \begin{itemize}
   \item \textbf{Objetos}:
   \begin{itemize}
-      \item O1: "Libro de Ciencia"
-      \item O2: "Cuaderno"
-      \item O3: "Bolígrafo"
-      \item O4: "Regla"
-      \item O5: "Lápiz"
-      \item O6: "Libro de Matemáticas"
-      \item O7: "Calculadora"
-      \item O8: "Compás"
+      \item O1: \quotes{Libro de Ciencia}
+      \item O2: \quotes{Cuaderno}
+      \item O3: \quotes{Bolígrafo}
+      \item O4: \quotes{Regla}
+      \item O5: \quotes{Lápiz}
+      \item O6: \quotes{Libro de Matemáticas}
+      \item O7: \quotes{Calculadora}
+      \item O8: \quotes{Compás}
   \end{itemize}
 \end{itemize}
 
 \begin{itemize}
   \item \textbf{Atributos}:
   \begin{itemize}
-      \item A1: "Escribible"
-      \item A2: "Leíble"
-      \item A3: "De medición"
-      \item A4: "Digital"
-      \item A5: "De dibujo"
+      \item A1: \quotes{Escribible}
+      \item A2: \quotes{Leíble}
+      \item A3: \quotes{De medición}
+      \item A4: \quotes{Digital}
+      \item A5: \quotes{De dibujo}
   \end{itemize}
 \end{itemize}
 
@@ -47,14 +49,14 @@ Definimos un conjunto de \textbf{objetos} y \textbf{atributos} para el análisis
 La descripción detallada de cada objeto con sus atributos es la siguiente:
 
 \begin{itemize}
-    \item \textbf{O1} ("Libro de Ciencia") - Atributos: Leíble
-    \item \textbf{O2} ("Cuaderno") - Atributos: Escribible, Leíble
-    \item \textbf{O3} ("Bolígrafo") - Atributos: Escribible
-    \item \textbf{O4} ("Regla") - Atributos: De medición
-    \item \textbf{O5} ("Lápiz") - Atributos: Escribible
-    \item \textbf{O6} ("Libro de Matemáticas") - Atributos: Leíble
-    \item \textbf{O7} ("Calculadora") - Atributos: Digital
-    \item \textbf{O8} ("Compás") - Atributos: De medición, De dibujo
+    \item \textbf{O1} (\quotes{Libro de Ciencia}) - Atributos: Leíble
+    \item \textbf{O2} (\quotes{Cuaderno}) - Atributos: Escribible, Leíble
+    \item \textbf{O3} (\quotes{Bolígrafo}) - Atributos: Escribible
+    \item \textbf{O4} (\quotes{Regla}) - Atributos: De medición
+    \item \textbf{O5} (\quotes{Lápiz}) - Atributos: Escribible
+    \item \textbf{O6} (\quotes{Libro de Matemáticas}) - Atributos: Leíble
+    \item \textbf{O7} (\quotes{Calculadora}) - Atributos: Digital
+    \item \textbf{O8} (\quotes{Compás}) - Atributos: De medición, De dibujo
 \end{itemize}
 
 Esta información se presenta en una tabla de contexto formal, donde cada celda indica la presencia (1) o ausencia (0) de un atributo en cada objeto (Figura \ref{fig:tabular_view}).
@@ -88,6 +90,53 @@ La relación de orden parcial entre los conceptos formales se establece mediante
     \item \textbf{C1} $\leq$ \textbf{C2}: {O2} es un subconjunto de {O1, O2, O6} y {Escribible, Leíble} $\subseteq$ {Leíble}.
     \item \textbf{C4 $\leq$ C7}: {O4} $\subseteq$ {O4, O8} y {De medición} $\subseteq$ {De medición}.
   \end{itemize}
+  
+
+\section{Descripción del Conjunto \( C \) por Extensión}
+
+  El conjunto \( C \) representa todos los conceptos formales generados a partir del contexto formal definido por los objetos y atributos. Cada concepto formal está compuesto por un conjunto de objetos (extensión) y un conjunto de atributos compartidos (intensión).
+  
+  \subsection{Objetos y Atributos}
+  \begin{itemize}
+      \item \textbf{O1}: Escribible, Leíble
+      \item \textbf{O2}: Escribible, Leíble
+      \item \textbf{O3}: Escribible
+      \item \textbf{O4}: De medición
+      \item \textbf{O5}: Escribible
+      \item \textbf{O6}: Leíble
+      \item \textbf{O7}: Digital
+      \item \textbf{O8}: De medición, De dibujo
+  \end{itemize}
+  
+  \subsection{Conjunto \( C \)}
+  El conjunto \( C \) se construye considerando las combinaciones posibles de extensiones e intensiones, sin repeticiones. Incluye las uniones de objetos con las intersecciones de atributos, y viceversa:
+  
+  \[
+  C = \{
+  \begin{aligned}
+  & (O1; \text{Escribible, Leíble}), (O2; \text{Escribible, Leíble}), (O3; \text{Escribible}), (O4; \text{De medición}), \\
+  & (O5; \text{Escribible}), (O6; \text{Leíble}), (O7; \text{Digital}), (O8; \text{De medición, De dibujo}), \\
+  & (O1, O2; \text{Escribible, Leíble}), (O3, O5; \text{Escribible}), (O4, O8; \text{De medición}), \\
+  & (O1, O2, O6; \text{Leíble}), (O4, O8; \text{De medición}), (O1, O2, O3, O5; \text{Escribible}), \\
+  & (O1, O2, O3, O4, O5, O6, O7, O8; \varnothing), (\varnothing; \text{Escribible, Leíble, De medición, Digital, De dibujo})
+  \end{aligned}
+  \}
+  \]
+  
+  \subsection{Detalle de los Elementos}
+  \begin{itemize}
+      \item \( (O1; \text{Escribible, Leíble}) \): El objeto \( O1 \) tiene los atributos \quotes{Escribible} y \quotes{Leíble}.
+      \item \( (O8; \text{De medición, De dibujo}) \): El objeto \( O8 \) tiene los atributos\quotes{De medición} y \quotes{De dibujo}.
+      \item \( (O3, O5; \text{Escribible}) \): Los objetos \( O3 \) y \( O5 \) comparten el atributo \quotes{Escribible}.
+      \item \( (O4, O8; \text{De medición}) \): Los objetos \( O4 \) y \( O8 \) comparten el atributo \quotes{De medición}.
+      \item \( (O1, O2, O6; \text{Leíble}) \): Los objetos \( O1, O2 \) y \( O6 \) comparten el atributo \quotes{Leíble}.
+      \item \( (O1, O2, O3, O5; \text{Escribible}) \): Los objetos \( O1, O2, O3 \) y \( O5 \) comparten el atributo \quotes{Escribible}.
+      \item \( (\varnothing; \text{Escribible, Leíble, De medición, Digital, De dibujo}) \): Conjunto vacío de objetos con todos los atributos.
+      \item \( (O1, O2, O3, O4, O5, O6, O7, O8; \varnothing) \): Conjunto completo de objetos sin atributos en común.
+  \end{itemize}
+  
+  Este conjunto \( C \) proporciona una representación jerárquica de todas las posibles combinaciones de relaciones entre los objetos y los atributos, sirviendo como base para la construcción del lattice de conceptos.
+
   
 \section{Representación Gráfica del Látice de Conceptos}
 
